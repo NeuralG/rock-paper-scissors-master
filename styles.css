@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+:root {
+	font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+	background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+	display: flex;
+	justify-content: baseline;
+	flex-direction: column;
+	align-self: center;
+	text-align: center;
+}
+
+.wrapper {
+	margin: auto;
+	width: 90%;
+	margin-top: 2em;
+	min-width: 300px;
+	max-width: 500px;
+	display: flex;
+	text-align: left;
+	flex-direction: column;
+}
+
+button:hover,
+.rules-close:hover,
+button:active,
+.rules-close:active {
+	cursor: pointer;
+	filter: brightness(0.75);
+}
+
+.rules #close-rules:hover {
+	filter: opacity(80%);
+}
+
+.game2 .btn:hover,
+.game2 .btn:active {
+	cursor: default;
+	filter: none;
+}
+
+/* SCORE DISPLAYER */
+
+.score-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.625em;
+	border: 3px solid hsl(217, 16%, 45%);
+	border-radius: 7.5px;
+	height: 92px;
+}
+
+ul {
+	list-style: none;
+}
+
+ul > li {
+	color: hsl(0, 0%, 99%);
+	font-size: 1.25rem;
+	margin: 0;
+	line-height: 0.85;
+}
+
+.score-wrapper > ul {
+	padding: 1em;
+}
+
+.score {
+	background-color: hsl(0, 0%, 99%);
+	padding: 0.6em 1.2em;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: space-evenly;
+	border-radius: 5px;
+}
+.score > p:not([id]) {
+	font-size: 0.75rem;
+	color: hsl(229, 64%, 46%);
+	letter-spacing: 1.75px;
+}
+
+/* GAME STEP1 */
+
+.game {
+	height: 40vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: "button1 button2" "button3 button3";
+	margin-top: 5rem;
+	background-image: url(images/bg-triangle.svg);
+	background-repeat: no-repeat;
+	background-size: 200px;
+	background-position: center;
+}
+
+.btn {
+	border-radius: 50%;
+	width: 125px;
+	aspect-ratio: 1;
+	align-self: center;
+	margin: auto;
+	--border-size: 13px;
+}
+
+.btn > img {
+	margin: auto;
+}
+
+#btn1 {
+	grid-area: button1;
+	border: var(--border-size) solid hsl(230, 89%, 62%);
+}
+
+#btn2 {
+	grid-area: button2;
+	border: var(--border-size) solid hsl(39, 89%, 49%);
+}
+
+#btn3 {
+	grid-area: button3;
+	border: var(--border-size) solid hsl(349, 71%, 52%);
+}
+
+/* GAME STEP2  */
+
+.game2 {
+	display: none;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 200px 50px 120px 50px;
+	height: 40vh;
+	margin-top: 3rem;
+	min-width: 300px;
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.game2 > p {
+	color: hsl(0, 0%, 99%);
+	letter-spacing: 2.5px;
+}
+
+#btn2-2 {
+	background: hsl(226, 48%, 16%);
+	box-shadow: 0px 0px 20px hsl(220, 57%, 7%);
+	border: 0;
+}
+
+#result {
+	grid-column: 1/3;
+	margin: auto;
+	font-size: 4em;
+	display: none;
+	letter-spacing: -1px;
+	padding: 0;
+	font-size: 3.75rem;
+}
+
+#play-again {
+	grid-column: 1/3;
+	margin: auto;
+	margin-top: -10px;
+	font-size: 1rem;
+	padding: 0.85rem 3.5rem;
+	letter-spacing: 3px;
+	display: none;
+	border-radius: 10px;
+	border: 0;
+	color: hsl(214, 47%, 23%);
+}
+
+/* RULES */
+
+.rules {
+	display: none;
+	height: 100vh;
+	width: 100vw;
+	background-color: hsl(0, 0%, 100%);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.rules p {
+	color: hsl(214, 47%, 23%);
+	font-size: 2rem;
+}
+
+.rules > * {
+	margin: auto;
+	position: static;
+}
+
+/* FOOTER RULESBTN */
+
+footer {
+	margin-top: auto;
+	height: 20vh;
+	display: flex;
+}
+
+footer > button {
+	margin: auto;
+	background-color: transparent;
+	border: 3px solid hsl(217, 16%, 45%);
+	color: hsl(0, 0%, 99%);
+	padding: 0.75em 2.25em;
+	border-radius: 10px;
+	letter-spacing: 3px;
+	font-size: 1rem;
+}
+
+@media screen and (width>1100px) {
+	/* GENERAL */
+	#rule-btn {
+		position: absolute;
+		bottom: 4%;
+		right: 4%;
+	}
+	.wrapper {
+		max-width: 700px;
+	}
+	.score-wrapper {
+		margin-top: 0.5rem;
+		height: 140px;
+	}
+	ul li {
+		font-size: 2rem;
+	}
+	.score {
+		width: 150px;
+		height: 114px;
+	}
+	.score > p:not([id]) {
+		font-size: 1rem;
+	}
+	footer {
+		height: auto;
+	}
+	#black-bg {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		min-height: 100vh;
+		min-width: 100vw;
+		z-index: 1;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+	/* GAME1 */
+	.game {
+		height: 55vh;
+		background-size: 40%;
+	}
+	.btn {
+		width: 200px;
+		--border-size: 20px;
+	}
+	.btn > img {
+		transform: scale(calc(63 / 44));
+	}
+	/* GAME2 */
+	.game2 {
+		align-items: end;
+		height: 50vh;
+		justify-content: center;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 50px 400px;
+		grid-template-areas:
+			"text1 result text2"
+			"btn1 result btn2"
+			"btn1 again btn2";
+		gap: 10px 50px;
+	}
+	#btn2-1 {
+		grid-area: btn1;
+	}
+	#btn2-2 {
+		grid-area: btn2;
+	}
+	.text1 {
+		grid-area: text1;
+		font-size: 2em;
+	}
+	.text2 {
+		grid-area: text2;
+		font-size: 2em;
+	}
+	#result {
+		grid-area: result;
+		margin-top: 230px;
+	}
+	#play-again {
+		grid-area: again;
+		margin-top: -150px;
+		margin-left: 75px;
+		margin-right: 75px;
+		text-wrap: nowrap;
+	}
+
+	.game2 > .btn {
+		width: 300px;
+	}
+	.game2 > .btn > img {
+		transform: scale(2);
+	}
+
+	/* RULES POPUP*/
+	.rules {
+		width: 400px;
+		height: 415px;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+		grid-template-columns: 1fr 1fr;
+		padding: 2rem;
+		border-radius: 5px;
+		box-shadow: 0;
+		z-index: 2;
+	}
+	.rules > p {
+		margin: 0 auto auto 0;
+	}
+	.rules-close {
+		grid-column-start: 2;
+		grid-row-start: 1;
+		margin: 0 0 auto auto;
+	}
+	.rules-img {
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+}

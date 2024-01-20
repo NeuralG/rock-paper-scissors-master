@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="cssResets.css" />
+
+		<title>Frontend Mentor | Rock, Paper, Scissors</title>
+	</head>
+	<body>
+		<main>
+			<div class="wrapper">
+				<div class="score-wrapper">
+					<ul>
+						<li>ROCK</li>
+						<li>PAPER</li>
+						<li>SCISSORS</li>
+					</ul>
+					<div class="score">
+						<p>SCORE</p>
+						<p id="win-amount"></p>
+					</div>
+				</div>
+				<div class="game" id="game1">
+					<button class="btn" id="btn1">
+						<img src="images/icon-paper.svg" />
+					</button>
+					<button class="btn" id="btn2">
+						<img src="images/icon-scissors.svg" />
+					</button>
+					<button class="btn" id="btn3">
+						<img src="images/icon-rock.svg" />
+					</button>
+				</div>
+			</div>
+			<div class="game2" id="game2">
+				<button class="btn" id="btn2-1">
+					<img id="btn2-1img" src="" />
+				</button>
+				<button class="btn" id="btn2-2">
+					<img id="btn2-2img" src="" />
+				</button>
+				<p class="text1">YOU PICKED</p>
+				<p class="text2">THE HOUSE PICKED</p>
+
+				<p id="result"></p>
+				<button id="play-again">PLAY AGAIN</button>
+			</div>
+			<div class="rules" id="rules">
+				<p>RULES</p>
+				<img class="rules-img" src="images/image-rules.svg" />
+				<img class="rules-close" id="close-rules" src="images/icon-close.svg" />
+			</div>
+			<div id="black-bg"></div>
+		</main>
+		<footer>
+			<button id="rule-btn">RULES</button>
+		</footer>
+	</body>
+	<script src="scripts.js"></script>
+</html>
